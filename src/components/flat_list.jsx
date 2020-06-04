@@ -7,7 +7,7 @@ class FlatList extends Component {
     const { flats } = this.props;
     return flats.map(flat => (
       <Flat
-        id={flat.name}
+        name={flat.name}
         imageUrl={flat.imageUrl}
         price={flat.price}
         priceCurrency={flat.priceCurrency}
@@ -18,7 +18,7 @@ class FlatList extends Component {
 
   render() {
     return (
-      <div className="gif-list">
+      <div className="flat-list">
         {this.renderList()}
       </div>
     );
