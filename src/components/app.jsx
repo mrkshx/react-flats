@@ -8,7 +8,8 @@ class App extends Component {
     super(props);
 
     this.state = {
-      flats
+      flats,
+      marker: [{ lat: 59.95, lng: 30.33, zoom: 11 }]
     };
   }
 
