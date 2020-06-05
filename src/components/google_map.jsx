@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 
-const AnyReactComponent = ({}) => <div><i className="fas fa-map-marker"></i></div>;
+const AnyReactComponent = ({}) => <div className="marker"></div>;
 
 class SimpleMap extends Component {
   render() {
@@ -17,7 +17,6 @@ class SimpleMap extends Component {
           <AnyReactComponent
             lat={lat}
             lng={lng}
-            // text='<i class="fas fa-map-marker"></i>'
           />
         </GoogleMapReact>
       </div>
