@@ -13,6 +13,13 @@ class App extends Component {
     };
   }
 
+  selectFlat = (lat, lng) => {
+    this.setState({
+      marker.lat: lat,
+      marker.lng: lng
+    });
+  }
+
   render() {
     const { marker } = this.state;
     return (
