@@ -9,16 +9,17 @@ class App extends Component {
 
     this.state = {
       flats,
-      marker: [{ lat: 59.95, lng: 30.33, zoom: 11 }]
+      marker: { lat: 59.95, lng: 30.33 }
     };
   }
 
   render() {
+    const { marker } = this.state;
     return (
       <div>
         <FlatList flats={this.state.flats} />
         <div className="map-container">
-          <SimpleMap />
+          <SimpleMap lat={marker.lat} lng={marker.lng} />
         </div>
       </div>
     );
