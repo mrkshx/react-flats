@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 class Flat extends Component {
   handleClick = () => {
-    // const { selectFunction } = this.props;
+    const { selectFlat, index } = this.props;
     // selectFunction(event.target.id);
-    console.log(this.props.index);
+    selectFlat(index);
   }
 
   render() {
