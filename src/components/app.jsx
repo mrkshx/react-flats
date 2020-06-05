@@ -15,8 +15,10 @@ class App extends Component {
 
   selectFlat = (lat, lng) => {
     this.setState({
-      marker.lat: lat,
-      marker.lng: lng
+      marker: {
+        lat,
+        lng
+      }
     });
   }
 
@@ -24,7 +26,7 @@ class App extends Component {
     const { marker } = this.state;
     return (
       <div>
-        <FlatList flats={this.state.flats} />
+        <FlatList flats={this.state.flats} selectFlat={this.selectFlat} />
         <div className="map-container">
           <SimpleMap lat={marker.lat} lng={marker.lng} />
         </div>
