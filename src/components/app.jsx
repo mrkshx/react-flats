@@ -9,16 +9,13 @@ class App extends Component {
 
     this.state = {
       flats,
-      marker: { lat: 59.95, lng: 30.33 }
+      marker: flats[0]
     };
   }
 
-  selectFlat = (lat, lng) => {
+  selectFlat = (index) => {
     this.setState({
-      marker: {
-        lat,
-        lng
-      }
+      marker: flats[index]
     });
   }
 
